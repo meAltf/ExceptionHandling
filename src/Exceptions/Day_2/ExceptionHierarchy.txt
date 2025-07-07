@@ -1,0 +1,47 @@
+* Exception Hierarchy & Multiple Catch Blocks
+
+* Java Exception Class Hierarchy
+Object
+└── Throwable
+    ├── Error (serious issues, usually not handled by programs)
+    └── Exception
+         ├── Checked Exceptions (e.g., IOException)  | Compile-time exception
+         └── RuntimeException (Unchecked, e.g., NullPointerException)
+
+
+* Key classes :
+1. Throwable : Base class for all exceptions and errors. | Parent class of all exceptions
+2. Exception : Used for conditions, a program should catch.
+3. RuntimeException : Unchecked exceptions that happen at runtime.
+4. Error : Serious issue like OutOfMemoryError
+
+
+* Common Runtime Exceptions (Unchecked)
+| Exception                        | Cause                                     |
+| -------------------------------- | ----------------------------------------- |
+| `ArithmeticException`            | Division by zero                          |
+| `NullPointerException`           | Accessing methods/fields on a null object |
+| `ArrayIndexOutOfBoundsException` | Accessing array index out of bounds       |
+| `NumberFormatException`          | Converting invalid string to number       |
+
+* Interview Q&A
+* Difference between Exception and Error
+Exception :
+- Recoverable problems that your program can handle
+- Happens due to bad input, file issues, network failures etc.
+- You are expected to catch and handle using try-catch block.
+
+Error :
+- Unrecoverable problems that are not meant to be handled.
+- Usually caused by environment or system failures.
+- Examples: running out of memory, stack overflow, classloader-failure
+
+NOTE :
+1. Java stops checking further catch blocks once a match is found.
+2. Place specific exceptions first, and general ones later.
+3. You can combine multiple exceptions in Java 7+ using |.
+Example:
+catch (IOException | SQLException exception) { ... }
+catch (ArithmeticException | NullPointerException exception) { ... }
+4. if you catch Exception before ArithmeticException- Compiler error due to unreachable catch block
+5. Catching Exception is too broad and may hide real bugs. Always catch the most specific exceptions you expect.
