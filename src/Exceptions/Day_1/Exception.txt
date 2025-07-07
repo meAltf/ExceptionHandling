@@ -1,0 +1,35 @@
+* Exception :
+- An Exception is an unwanted or unexpected event that occurs during the execution of a program,
+- that disrupting the normal flow of instruction.
+
+* Why Exception handling :
+- Without handling, programs will crash when errors occurs.
+- Handled errors gracefully, show a friendly message.
+
+* Types of Exception :
+
+1. Checked Exception (Compile-time)
+- You must handle these, else compiler will give errors
+Examples: IOException | SQLException | FileNotFoundException
+
+2. Unchecked Exception (Runtime)
+- Not mandatory to handle, program crashes if exception uncaught
+Examples : ArithmeticException | NullPointerException | ArrayIndexOutOfBoundsException
+
+* Real-World Analogy
+- Imagine you swipe your metro card at the gate, and it doesn't work.
+- Instead of shutting down the entire station (like a crash), the system gives a graceful message like:
+- "Please try again or contact support."
+
+- That’s what exception handling does – it catches problems and responds nicely.
+
+
+* Interview Prep Questions
+1. What is an Exception :
+- An exception is an object that describes an error condition and interrupts the normal program flow.
+
+2. How does Java handle exceptions :
+- Using try-catch-finally blocks.
+- The try block contains risky code,
+- The catch block handles specific exceptions,
+- The finally block always executes. (if finally() present)
