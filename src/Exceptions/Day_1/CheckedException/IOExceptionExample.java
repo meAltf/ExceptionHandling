@@ -1,4 +1,4 @@
-package Exceptions.Day_1;
+package Exceptions.Day_1.CheckedException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

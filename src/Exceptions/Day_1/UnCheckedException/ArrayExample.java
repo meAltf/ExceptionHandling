@@ -1,4 +1,4 @@
-package Exceptions.Day_1;
+package Exceptions.Day_1.UnCheckedException;
 
 public class ArrayExample {
     public static void main(String[] args) {

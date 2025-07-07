@@ -1,4 +1,4 @@
-package Exceptions.Day_1;
+package Exceptions.Day_1.UnCheckedException;
 
 public class NullExample {
     public static void main(String[] args) {

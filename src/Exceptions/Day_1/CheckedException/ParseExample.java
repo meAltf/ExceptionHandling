@@ -1,4 +1,4 @@
-package Exceptions.Day_1;
+package Exceptions.Day_1.CheckedException;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

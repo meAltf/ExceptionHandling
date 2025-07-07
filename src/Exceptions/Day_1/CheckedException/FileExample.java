@@ -1,4 +1,4 @@
-package Exceptions.Day_1;
+package Exceptions.Day_1.CheckedException;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
