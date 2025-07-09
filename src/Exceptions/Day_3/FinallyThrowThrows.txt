@@ -1,0 +1,30 @@
+-- finally, throw, and throws
+
+* finally()-
+- Used to execute code regardless of whether an exception was thrown or not.
+- Use cases : Closing files | releasing resources | closing DB connections.
+
+* throw()-
+- Used to explicitly throw an exception object (either predefined or custom)
+- Key rule : You must throw an object of type Throwable(or subclass)
+
+* throws()-
+- Used in method declaration to say: "This method might throw this exception, handle it wherever it's called".
+- If you use a checked exception inside a method, either handle it try-catch or declare it throws.
+
+
+
+* NOTE :
+1. throws- used to declare that a method may throw exception.
+2. Only throwable or its subclasses type of objects throw exception using throw();
+
+* Interview Q&A :
+1. Difference b/w throw() & throwS()
+- throw() is actually used to throw an exception.
+- throws() is used to declare that a method might throw exception.
+
+2. Does finally() block always execute ?
+- Yes, unless the JVM exits forcibly(System.exit(0)) or it crashes.
+
+3. Can a method have both try-catch & throws ?
+- Yes, you can handle some exceptions using try-catch, and declare others with throws.
