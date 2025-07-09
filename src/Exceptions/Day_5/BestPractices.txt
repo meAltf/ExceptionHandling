@@ -1,0 +1,27 @@
+-- Best Practices + Interview Prep
+
+* Best Practices for Exception Handling
+1. Catch the Most Specific Exception First | Don't catch generic exception unless absolutely necessary
+- Good :
+catch (FileNotFoundException e) { ... }
+catch (IOException e) { ... }
+
+-Bad :
+catch (Exception e) { ... }  // Too generic
+
+2. Don't Swallow Exceptions Silently | Empty catch blocks make debugging hard.
+- Good :
+catch (Exception e) { e.printStackTrace(); }
+
+-Bad :
+catch (Exception e) { }  // You won’t know what went wrong
+
+3. Use finally or Try-With-Resources to Close Resources | Don’t forget to close files, DB connections, etc.
+- Good : try-with-Resources
+try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+    System.out.println(br.readLine());
+}
+
+4. Never Use Exceptions for Flow Control | Don’t write logic that relies on catching exceptions to function.
+5. Create Meaningful Custom Exceptions | Instead of reusing RuntimeException, create domain-specific ones.
+
