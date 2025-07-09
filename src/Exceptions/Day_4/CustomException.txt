@@ -1,0 +1,16 @@
+-- Custom Exceptions
+
+* Why custom exception :
+- JAVA provides many built-in exceptions like IOException, NullPointerException, etc.
+- But sometimes we want to represent our application-specific errors.
+- like, InvalidAgeException | InsufficientBalanceException | UserNotFoundException in banking & login systems.
+- It makes our code more meaningful, readable, and maintainable.
+
+* Create a custom Exception:
+1. By extending 'Exception' - makes it a checked exception
+2. By extending 'RuntimeException' - makes it an unchecked exception
+
+
+Interview Q&A:
+- Create a checkedException, By extending the 'Exception' class and optionally providing a constructor that accepts an error message.
+- Checked must be handled (or declared using throws); unchecked exceptions don’t require handling.
